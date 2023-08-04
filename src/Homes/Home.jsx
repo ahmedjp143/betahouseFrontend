@@ -65,6 +65,7 @@ const Home = () => {
             <Grid container spacing={2}>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='Title'
                   id='Title'
                   name='Title'
                   {...register('Title')}
@@ -75,6 +76,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='name'
                   id='name'
                   {...register('name')}
                   variant='outlined'
@@ -84,6 +86,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='location'
                   {...register('location')}
                   variant='outlined'
                   size='small'
@@ -92,6 +95,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='logo'
                   {...register('logo')}
                   variant='outlined'
                   size='small'
@@ -100,6 +104,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='email'
                   {...register('email')}
                   variant='outlined'
                   size='small'
@@ -108,6 +113,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='Com_Plane_Email'
                   {...register('Com_Plane_Email')}
                   variant='outlined'
                   size='small'
@@ -116,6 +122,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='Com_Plane_Phone'
                   {...register('Com_Plane_Phone')}
                   type='number'
                   variant='outlined'
@@ -125,6 +132,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='facebook'
                   {...register('facebook')}
                   variant='outlined'
                   size='small'
@@ -133,6 +141,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='tiktok'
                   {...register('tiktok')}
                   variant='outlined'
                   size='small'
@@ -141,6 +150,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='twitter'
                   {...register('twitter')}
                   variant='outlined'
                   size='small'
@@ -149,6 +159,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='instagram'
                   {...register('instagram')}
                   variant='outlined'
                   size='small'
@@ -157,6 +168,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='HeroTitle'
                   {...register('HeroTitle')}
                   variant='outlined'
                   size='small'
@@ -173,6 +185,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='heroImage'
                   {...register('heroImage')}
                   variant='outlined'
                   size='small'
@@ -181,6 +194,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='footerText'
                   {...register('footerText')}
                   variant='outlined'
                   size='small'
