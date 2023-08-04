@@ -1,7 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import { Button } from 'reactstrap';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
 import { IconButton } from '@mui/material';
