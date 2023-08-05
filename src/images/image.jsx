@@ -116,7 +116,8 @@ const Image = () => {
                 >
                   <CardMedia
                     component='img'
-                    height='194'
+                    width='100%'
+                    height='100%'
                     image={url.pathImage}
                     alt='Paella dish'
                   />
