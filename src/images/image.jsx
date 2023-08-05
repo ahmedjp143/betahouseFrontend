@@ -98,7 +98,7 @@ const Image = () => {
         {/* cards */}
         <Grid container>
           <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-            {getimage.map((item) => (
+            {getimage?.map((item) => (
               <ImageListItem key={item.pathImage}>
                 <img
                   src={`${item.pathImage}?w=164&h=164&fit=crop&auto=format`}
