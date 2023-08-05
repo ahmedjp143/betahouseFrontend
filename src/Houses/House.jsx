@@ -58,6 +58,7 @@ function House() {
   const [hlid, sethlid] = useState('');
   const [Sweeralert, setSweeralert] = useState(false);
   const [did, setdid] = useState('');
+  const [updateselect, setupdateselect] = useState({});
 
   const handlehousetoggle = () => {
     sethousetoggle(!housetoggle);
@@ -103,8 +104,8 @@ function House() {
     setValue('typeHouse', data.typeHouse);
     setValue('toilets', data.toilets);
     setValue('rent', data.rent);
-    setValue('parking', data.parking);
-    setValue('isAvailable', data.isAvailable);
+    // setValue('parking', data.parking);
+    // setValue('isAvailable', data.isAvailable);
     setValue('imagespriview', data.imagespriview);
     setValue('faafaahin', data.faafaahin);
     setValue('deposit', data.deposit);
@@ -114,6 +115,7 @@ function House() {
     setValue('MasterRoom', data.MasterRoom);
     sethlid(data._id);
     handlehousetoggle();
+    setupdateselect(data);
   };
   // delete fuction
   const deleteClientFuction = () => {
@@ -236,6 +238,7 @@ function House() {
                       id='demo-simple-select'
                       label='parking'
                       {...register('parking')}
+                      defaultValue={updateselect.parking}
 
                       //   onChange={handleChange}
                     >
@@ -268,6 +271,7 @@ function House() {
                       labelId='demo-simple-select-label'
                       id='demo-simple-select'
                       {...register('isAvailable')}
+                      defaultValue={updateselect.isAvailable}
                       label='isAvailable'
                     >
                       <MenuItem value='haa'>Haa</MenuItem>
