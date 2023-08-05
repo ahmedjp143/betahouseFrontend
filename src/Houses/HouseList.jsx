@@ -37,8 +37,12 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
             <Chip
               size='small'
               label='See More'
-              variant='outlined'
-              sx={{ marginLeft: '10px', bgcolor: 'primary.main' }}
+              variant='contained'
+              sx={{
+                marginLeft: '10px',
+                // bgcolor: 'primary.main',
+                color: 'black',
+              }}
               onClick={() => seeMore(params.row)}
             />
           </Box>
@@ -134,7 +138,7 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
               style={{
                 textDecoration: 'none',
                 color: 'black',
-                backgroundColor: '#C8B568',
+                backgroundColor: '#f1f2f1',
                 padding: '5px',
                 borderRadius: '10px',
                 fontWeight: 'bold',
@@ -161,7 +165,7 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
         >
           <DialogTitle
             id='alert-dialog-title'
-            sx={{ bgcolor: 'primary.ahmed', borderBottom: '2px solid black' }}
+            sx={{ bgcolor: 'primary.main', borderBottom: '2px solid black' }}
           >
             <Box sx={{ display: 'flex', gap: 5, alignItems: 'center' }}>
               <Typography variant='h6'> typeHouse: </Typography>
@@ -178,6 +182,8 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
                     gap: 5,
                     alignItems: 'center',
                     marginBottom: '10px',
+                    borderBottom: 2,
+                    paddingY: 2,
                   }}
                 >
                   <Typography variant='h6'> Rooms: </Typography>
@@ -190,6 +196,8 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
                     gap: 5,
                     alignItems: 'center',
                     marginBottom: '10px',
+                    borderBottom: 2,
+                    paddingY: 2,
                   }}
                 >
                   <Typography variant='h6'> MasterRoom: </Typography>
@@ -202,6 +210,8 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
                     gap: 5,
                     alignItems: 'center',
                     marginBottom: '10px',
+                    borderBottom: 2,
+                    paddingY: 2,
                   }}
                 >
                   <Typography variant='h6'> toilets: </Typography>
@@ -214,6 +224,8 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
                     gap: 5,
                     alignItems: 'center',
                     marginBottom: '10px',
+                    borderBottom: 2,
+                    paddingY: 2,
                   }}
                 >
                   <Typography variant='h6'> rent: </Typography>
@@ -226,6 +238,8 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
                     gap: 5,
                     alignItems: 'center',
                     marginBottom: '10px',
+                    borderBottom: 2,
+                    paddingY: 2,
                   }}
                 >
                   <Typography variant='h6'> deposit: </Typography>
@@ -238,6 +252,8 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
                     gap: 5,
                     alignItems: 'center',
                     marginBottom: '10px',
+                    borderBottom: 2,
+                    paddingY: 2,
                   }}
                 >
                   <Typography variant='h6'> parking: </Typography>

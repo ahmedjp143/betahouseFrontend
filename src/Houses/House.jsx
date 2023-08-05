@@ -203,32 +203,35 @@ function House() {
                       {errors.address.message}
                     </Typography>
                   ) : null}
-                  <TextField
-                    label='rent'
-                    type='number'
-                    {...register('rent')}
-                    variant='outlined'
-                    size='small'
-                    fullWidth
-                  />
-                  {errors.rent ? (
-                    <Typography sx={{ color: 'red' }}>
-                      {errors.rent.message}
-                    </Typography>
-                  ) : null}
-                  <TextField
-                    label='deposit'
-                    type='number'
-                    {...register('deposit')}
-                    variant='outlined'
-                    size='small'
-                    fullWidth
-                  />
-                  {errors.deposit ? (
-                    <Typography sx={{ color: 'red' }}>
-                      {errors.deposit.message}
-                    </Typography>
-                  ) : null}
+                  <Stack direction={'row'} spacing={2}>
+                    <TextField
+                      label='rent'
+                      type='number'
+                      {...register('rent')}
+                      variant='outlined'
+                      size='small'
+                      fullWidth
+                    />
+                    {errors.rent ? (
+                      <Typography sx={{ color: 'red' }}>
+                        {errors.rent.message}
+                      </Typography>
+                    ) : null}
+                    <TextField
+                      label='deposit'
+                      type='number'
+                      {...register('deposit')}
+                      variant='outlined'
+                      size='small'
+                      fullWidth
+                    />
+                    {errors.deposit ? (
+                      <Typography sx={{ color: 'red' }}>
+                        {errors.deposit.message}
+                      </Typography>
+                    ) : null}
+                  </Stack>
+
                   <FormControl fullWidth>
                     <InputLabel id='demo-simple-select-label'>
                       parking

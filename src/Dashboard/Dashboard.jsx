@@ -23,7 +23,7 @@ export const Dashboard = () => {
 
             <Box
               sx={{
-                bgcolor: 'primary.side',
+                bgcolor: 'primary.main',
                 color: 'white',
                 display: 'flex',
                 justifyContent: {
@@ -47,10 +47,7 @@ export const Dashboard = () => {
                 <MenuIcon sx={{ color: 'white' }} />
               </IconButton>
 
-              <Typography sx={{ padding: '10px 25px' }}>
-                {' '}
-                User : ahmed@gmail.com
-              </Typography>
+              <Typography> User : ahmed@gmail.com</Typography>
             </Box>
 
             {/* top header end */}

@@ -17,19 +17,19 @@ import notfound from './logos/error.png';
 function Notfound() {
   return (
     <>
-      <Box>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontStyle: 'oblique',
-            fontFamily: 'sans-serif',
-          }}
-        >
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontStyle: 'oblique',
+          fontFamily: 'sans-serif',
+        }}
+      >
+        <Box>
           <Typography variant='h1'> Not Found</Typography>
         </Box>
-        <img src={notfound} alt='notfound' width='70%'></img>
+        <img src={notfound} alt='notfound' width='40%'></img>
       </Box>
     </>
   );

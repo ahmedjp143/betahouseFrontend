@@ -17,6 +17,7 @@ import ApartmentIcon from '@mui/icons-material/Apartment';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 import TroubleshootIcon from '@mui/icons-material/Troubleshoot';
+import CollectionsIcon from '@mui/icons-material/Collections';
 // import ExpandLess from '@mui/icons-material/ExpandLess';
 // import ExpandMore from '@mui/icons-material/ExpandMore';
 import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
@@ -216,13 +217,10 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
       <Box
         sx={{
           width: '330px',
-
           bgcolor: 'primary.normal',
-
-          height: '100vh',
+          height: '300vh',
           display: {
             xs: 'none',
-
             md: 'block',
           },
           borderRight: 1,
@@ -258,13 +256,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
               style={{ textDecoration: 'none', color: 'white' }}
             >
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
                   <DashboardCustomizeIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>
@@ -273,13 +271,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
             </Link>
             <Link to='home' style={{ textDecoration: 'none', color: 'white' }}>
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
                   <MapsHomeWorkIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>
@@ -291,13 +289,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
               style={{ textDecoration: 'none', color: 'white' }}
             >
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
                   <HouseIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>
@@ -307,13 +305,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
 
             <Link to='image' style={{ textDecoration: 'none', color: 'white' }}>
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
                   <CameraAltIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>
@@ -326,13 +324,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
               style={{ textDecoration: 'none', color: 'white' }}
             >
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
                   <SupportAgentIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>
@@ -345,13 +343,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
               style={{ textDecoration: 'none', color: 'white' }}
             >
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
                   <ApartmentIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>
@@ -364,13 +362,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
               style={{ textDecoration: 'none', color: 'white' }}
             >
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
                   <AddIcCallIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>
@@ -380,13 +378,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
             </Link>
             <Link to='about' style={{ textDecoration: 'none', color: 'white' }}>
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
                   <TroubleshootIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>
@@ -399,13 +397,13 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
               style={{ textDecoration: 'none', color: 'white' }}
             >
               <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.side' } }}
+                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
               >
                 <ListItemIcon>
-                  <TroubleshootIcon
+                  <CollectionsIcon
                     sx={{
-                      backgroundColor: 'primary.buton',
-                      color: 'primary.normal',
+                      backgroundColor: 'primary.normal',
+                      color: 'primary.buton',
                     }}
                   />
                 </ListItemIcon>

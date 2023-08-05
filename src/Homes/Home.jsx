@@ -177,6 +177,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} md={3} m={2}>
                 <TextField
+                  label='HeroDecribtion'
                   {...register('HeroDecribtion')}
                   variant='outlined'
                   size='small'
