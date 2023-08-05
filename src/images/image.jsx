@@ -97,7 +97,18 @@ const Image = () => {
         </Box>
         {/* cards */}
         <Grid container>
-          {getimage?.map((url) => {
+          <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+            {getimage.map((item) => (
+              <ImageListItem key={item.pathImage}>
+                <img
+                  src={`${item.pathImage}?w=164&h=164&fit=crop&auto=format`}
+                  srcSet={`${item.pathImage}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                  loading='lazy'
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+          {/* {getimage?.map((url) => {
             return (
               <Grid xl={4} md={6} sm={12} xs={12}>
                 <Card
@@ -112,7 +123,7 @@ const Image = () => {
                 </Card>
               </Grid>
             );
-          })}
+          })} */}
         </Grid>
       </Box>
     </>
