@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import { Button } from '@mui/material';
+import { Button, IconButton } from '@mui/material';
 import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 const ServiceList = ({ serviceget, updateservice }) => {
@@ -33,16 +33,13 @@ const ServiceList = ({ serviceget, updateservice }) => {
       renderCell: (params) => {
         return (
           <div>
-            <Button
-              variant='contained'
-              sx={{ bgcolor: 'primary.buton' }}
-              size='small'
+            <IconButton
               onClick={() => {
                 updateservice(params.row);
               }}
             >
-              <BorderColorIcon />
-            </Button>
+              <BorderColorIcon sx={{ color: 'primary.normal' }} />
+            </IconButton>
           </div>
         );
       },

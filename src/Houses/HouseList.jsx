@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import { Button, Chip, Stack, Typography } from '@mui/material';
+import { Button, Chip, IconButton, Stack, Typography } from '@mui/material';
 import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import Dialog from '@mui/material/Dialog';
@@ -91,16 +91,16 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
       renderCell: (params) => {
         return (
           <div>
-            <Button
-              variant='contained'
-              sx={{ bgcolor: 'primary.buton' }}
-              size='small'
+            <IconButton
+              // variant='contained'
+              // sx={{ bgcolor: 'primary.buton' }}
+              // size='small'
               onClick={() => {
                 deletedata(params.row._id);
               }}
             >
-              <AutoDeleteIcon />
-            </Button>
+              <AutoDeleteIcon sx={{ color: 'primary.normal' }} />
+            </IconButton>
           </div>
         );
       },
@@ -112,16 +112,16 @@ function HouseList({ housegetdata, updatahouse, deletedata }) {
       renderCell: (params) => {
         return (
           <div>
-            <Button
-              variant='contained'
-              size='small'
-              sx={{ bgcolor: 'primary.buton' }}
+            <IconButton
+              // variant='contained'
+              // size='small'
+              // sx={{ bgcolor: 'primary.buton' }}
               onClick={() => {
                 updatahouse(params.row);
               }}
             >
-              <BorderColorIcon />
-            </Button>
+              <BorderColorIcon sx={{ color: 'primary.normal' }} />
+            </IconButton>
           </div>
         );
       },

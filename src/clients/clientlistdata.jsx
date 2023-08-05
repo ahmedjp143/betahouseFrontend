@@ -5,7 +5,7 @@ import { DeleteAllData } from '../../ApiCrudOperation/CrudOperation';
 // import { Message } from '@mui/icons-material';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Button } from '@mui/material';
+import { Button, IconButton } from '@mui/material';
 import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 
@@ -50,16 +50,17 @@ const Clientlistdata = ({ ourclientdata, updatedata, deletdata }) => {
       renderCell: (params) => {
         return (
           <div>
-            <Button
-              variant='contained'
-              size='small'
-              sx={{ bgcolor: 'primary.buton' }}
+            <IconButton
+              // variant='contained'
+
+              // size='small'
+              // sx={{ bgcolor: 'primary.buton' }}
               onClick={() => {
                 deletdata(params.row._id);
               }}
             >
-              <AutoDeleteIcon />
-            </Button>
+              <AutoDeleteIcon sx={{ color: 'primary.normal' }} />
+            </IconButton>
           </div>
         );
       },
@@ -71,16 +72,16 @@ const Clientlistdata = ({ ourclientdata, updatedata, deletdata }) => {
       renderCell: (params) => {
         return (
           <div>
-            <Button
-              variant='contained'
-              sx={{ bgcolor: 'primary.buton' }}
-              size='small'
+            <IconButton
+              // variant='contained'
+              // sx={{ bgcolor: 'primary.buton' }}
+              // size='small'
               onClick={() => {
                 updatedata(params.row);
               }}
             >
-              <BorderColorIcon />
-            </Button>
+              <BorderColorIcon sx={{ color: 'primary.normal' }} />
+            </IconButton>
           </div>
         );
       },

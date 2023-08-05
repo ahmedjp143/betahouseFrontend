@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import { Button } from '@mui/material';
+import { Button, IconButton } from '@mui/material';
 import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 
@@ -25,16 +25,16 @@ const GalleryList = ({ gallerygetdata, updategallery }) => {
       renderCell: (params) => {
         return (
           <div>
-            <Button
-              variant='contained'
-              size='small'
-              sx={{ bgcolor: 'primary.buton' }}
+            <IconButton
+              // variant='contained'
+              // size='small'
+              // sx={{ bgcolor: 'primary.buton' }}
               onClick={() => {
                 updategallery(params.row);
               }}
             >
-              <BorderColorIcon />
-            </Button>
+              <BorderColorIcon sx={{ color: 'primary.normal' }} />
+            </IconButton>
           </div>
         );
       },
