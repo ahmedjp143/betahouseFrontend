@@ -6,8 +6,11 @@ import { useState } from 'react';
 import Image from '../images/image';
 // import { Outlet } from '@mui/icons-material';
 import { Outlet } from 'react-router-dom';
+import { useUsercontext } from '../contextApi/Context';
+import { Logout } from '@mui/icons-material';
 export const Dashboard = () => {
   const [draweOpen, setDrawer] = useState(false);
+  const { islogin, email, logout } = useUsercontext();
 
   const ToggleDrawer = () => {
     setDrawer(!draweOpen);
@@ -46,8 +49,12 @@ export const Dashboard = () => {
               >
                 <MenuIcon sx={{ color: 'white' }} />
               </IconButton>
-
-              <Typography> User : ahmed@gmail.com</Typography>
+              <Stack direction={'row'} spacing={2}>
+                <Typography> User : {email}</Typography>
+                <IconButton sx={{ p: 0 }} onClick={() => logout()}>
+                  <Logout sx={{ color: 'white' }} />
+                </IconButton>
+              </Stack>
             </Box>
 
             {/* top header end */}

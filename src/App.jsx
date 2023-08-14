@@ -11,6 +11,7 @@ import About from './About/About';
 import Galery from './Gellery/Galery';
 import House from './Houses/House';
 import Notfound from './Notfound';
+import Login from './Login/Login';
 // import Dashboard from './Dashboard/Dashboard';
 // import Image from './images/image';
 // import { Clients } from './clients/Clients';
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<h2> loging page</h2>} />
+        <Route path='/' element={<Login />} />
         <Route path='*' element={<Notfound />} />
         <Route path='dashboard' element={<Dashboard />}>
           <Route path='image/:id' element={<Image />} />
