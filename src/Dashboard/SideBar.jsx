@@ -29,8 +29,15 @@ import logo from '../logos/logo.png';
 
 // import StarBorder from '@mui/icons-material/StarBorder';
 import FontAwesome from 'react-fontawesome';
+import { useUsercontext } from '../contextApi/Context';
+import { useEffect } from 'react';
 
 export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
+  const { roleallowed, onload } = useUsercontext();
+  useEffect(() => {
+    onload();
+  }, []);
+
   return (
     <>
       {/* drawer */}
@@ -269,148 +276,219 @@ export const Sidebar = ({ DrawerOpen, DrawerClose }) => {
                 <ListItemText primary='Dashboard' />
               </ListItemButton>
             </Link>
-            <Link to='home' style={{ textDecoration: 'none', color: 'white' }}>
-              <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
-              >
-                <ListItemIcon>
-                  <MapsHomeWorkIcon
-                    sx={{
-                      backgroundColor: 'primary.normal',
-                      color: 'primary.buton',
-                    }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary='HomeSitting' />
-              </ListItemButton>
-            </Link>
-            <Link
-              to='guryaha'
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
-              >
-                <ListItemIcon>
-                  <HouseIcon
-                    sx={{
-                      backgroundColor: 'primary.normal',
-                      color: 'primary.buton',
-                    }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary='Houses' />
-              </ListItemButton>
-            </Link>
+            {roleallowed == 'Admin' ? (
+              <>
+                <Link
+                  to='home'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <MapsHomeWorkIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary='HomeSitting' />
+                  </ListItemButton>
+                </Link>
+                <Link
+                  to='guryaha'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <HouseIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary='Houses' />
+                  </ListItemButton>
+                </Link>
 
-            <Link to='image' style={{ textDecoration: 'none', color: 'white' }}>
-              <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
-              >
-                <ListItemIcon>
-                  <CameraAltIcon
-                    sx={{
-                      backgroundColor: 'primary.normal',
-                      color: 'primary.buton',
-                    }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary='Images' />
-              </ListItemButton>
-            </Link>
+                <Link
+                  to='image'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <CameraAltIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary='Images' />
+                  </ListItemButton>
+                </Link>
 
-            <Link
-              to='service'
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
-              >
-                <ListItemIcon>
-                  <SupportAgentIcon
-                    sx={{
-                      backgroundColor: 'primary.normal',
-                      color: 'primary.buton',
-                    }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary='Services' />
-              </ListItemButton>
-            </Link>
+                <Link
+                  to='service'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <SupportAgentIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary='Services' />
+                  </ListItemButton>
+                </Link>
 
-            <Link
-              to='client'
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
-              >
-                <ListItemIcon>
-                  <ApartmentIcon
-                    sx={{
-                      backgroundColor: 'primary.normal',
-                      color: 'primary.buton',
-                    }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary='Clients' />
-              </ListItemButton>
-            </Link>
+                <Link
+                  to='client'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <ApartmentIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary='Clients' />
+                  </ListItemButton>
+                </Link>
 
-            <Link
-              to='contact'
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
-              >
-                <ListItemIcon>
-                  <AddIcCallIcon
-                    sx={{
-                      backgroundColor: 'primary.normal',
-                      color: 'primary.buton',
-                    }}
-                  />
-                </ListItemIcon>
+                <Link
+                  to='contact'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <AddIcCallIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
 
-                <ListItemText primary='contact' />
-              </ListItemButton>
-            </Link>
-            <Link to='about' style={{ textDecoration: 'none', color: 'white' }}>
-              <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
-              >
-                <ListItemIcon>
-                  <TroubleshootIcon
-                    sx={{
-                      backgroundColor: 'primary.normal',
-                      color: 'primary.buton',
-                    }}
-                  />
-                </ListItemIcon>
+                    <ListItemText primary='contact' />
+                  </ListItemButton>
+                </Link>
+                <Link
+                  to='about'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <TroubleshootIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
 
-                <ListItemText primary='About' />
-              </ListItemButton>
-            </Link>
-            <Link
-              to='galery'
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              <ListItemButton
-                sx={{ ':hover': { backgroundColor: 'primary.main' } }}
-              >
-                <ListItemIcon>
-                  <CollectionsIcon
-                    sx={{
-                      backgroundColor: 'primary.normal',
-                      color: 'primary.buton',
-                    }}
-                  />
-                </ListItemIcon>
+                    <ListItemText primary='About' />
+                  </ListItemButton>
+                </Link>
+                <Link
+                  to='galery'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <CollectionsIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
 
-                <ListItemText primary='Gallery' />
-              </ListItemButton>
-            </Link>
+                    <ListItemText primary='Gallery' />
+                  </ListItemButton>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  to='home'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <MapsHomeWorkIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary='HomeSitting' />
+                  </ListItemButton>
+                </Link>
+                <Link
+                  to='guryaha'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <HouseIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary='Houses' />
+                  </ListItemButton>
+                </Link>
+                <Link
+                  to='contact'
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <ListItemButton
+                    sx={{ ':hover': { backgroundColor: 'primary.main' } }}
+                  >
+                    <ListItemIcon>
+                      <AddIcCallIcon
+                        sx={{
+                          backgroundColor: 'primary.normal',
+                          color: 'primary.buton',
+                        }}
+                      />
+                    </ListItemIcon>
+
+                    <ListItemText primary='contact' />
+                  </ListItemButton>
+                </Link>
+              </>
+            )}
           </List>
         </Box>
         {/* end Menu list */}
