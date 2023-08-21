@@ -21,6 +21,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { Circles } from 'react-loader-spinner';
 
 const Service = () => {
   const validationYup = yup.object({
@@ -184,7 +185,24 @@ const Service = () => {
         {/*end Dialog */}
         <Divider />
         {isLoading ? (
-          'Loading...'
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+          >
+            <Circles
+              height='80'
+              width='80'
+              color='#4fa94d'
+              ariaLabel='circles-loading'
+              wrapperStyle={{}}
+              wrapperClass=''
+              visible={true}
+            />
+          </div>
         ) : service ? (
           <ServiceList serviceget={service} updateservice={updateserviceinfo} />
         ) : null}

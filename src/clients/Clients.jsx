@@ -36,6 +36,7 @@ import {
 import { useQuery } from '@tanstack/react-query';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { Circles } from 'react-loader-spinner';
 
 export const Clients = () => {
   const validationYup = yup.object({
@@ -203,7 +204,24 @@ export const Clients = () => {
 
         <Divider />
         {isLoading ? (
-          'loading....'
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+          >
+            <Circles
+              height='80'
+              width='80'
+              color='#4fa94d'
+              ariaLabel='circles-loading'
+              wrapperStyle={{}}
+              wrapperClass=''
+              visible={true}
+            />
+          </div>
         ) : client ? (
           <Clientlistdata
             ourclientdata={client}

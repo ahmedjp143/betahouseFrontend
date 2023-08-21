@@ -20,6 +20,7 @@ import { AddQuery, GetQuery, UpdateQuery } from '../../queryApi/ReactApi';
 import { toast } from 'react-toastify';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { Circles } from 'react-loader-spinner';
 function Galery() {
   const validationYup = yup.object({
     ImageTitle: yup.string().required('Please Enter The ImageTitle'),
@@ -161,7 +162,24 @@ function Galery() {
         {/*end Dialog */}
         <Divider />
         {isLoading ? (
-          'Loading...'
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+          >
+            <Circles
+              height='80'
+              width='80'
+              color='#4fa94d'
+              ariaLabel='circles-loading'
+              wrapperStyle={{}}
+              wrapperClass=''
+              visible={true}
+            />
+          </div>
         ) : gallery ? (
           <GalleryList
             gallerygetdata={gallery}

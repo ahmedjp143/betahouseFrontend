@@ -13,6 +13,7 @@ import House from './Houses/House';
 import Notfound from './Notfound';
 import Login from './Login/Login';
 import { useUsercontext } from './contextApi/Context';
+import CardDashboard from './Dashboard/CardDashboard';
 // import Dashboard from './Dashboard/Dashboard';
 // import Image from './images/image';
 // import { Clients } from './clients/Clients';
@@ -29,6 +30,7 @@ function App() {
         <Route path='dashboard' element={<Dashboard />}>
           {roleallowed == 'Admin' ? (
             <>
+              <Route path='dashboard' element={<CardDashboard />} />
               <Route path='image/:id' element={<Image />} />
               <Route path='client' element={<Clients />} />
               <Route path='home' element={<Home />} />

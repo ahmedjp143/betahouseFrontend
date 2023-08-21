@@ -15,6 +15,7 @@ import { toast } from 'react-toastify';
 import jscookie from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import { useUsercontext } from '../contextApi/Context';
+import { ThreeCircles, Vortex } from 'react-loader-spinner';
 function Login() {
   const usenavigate = useNavigate();
   const validationYup = yup.object({
@@ -44,7 +45,7 @@ function Login() {
           //   console.log(res.data.token);
           toast.success(res.data.message);
           jscookie.set('token', res.data.token);
-          usenavigate('/dashboard');
+          usenavigate('/dashboard/dashboard');
         } else {
           toast.error(res.data.message);
         }
@@ -111,8 +112,22 @@ function Login() {
               </Typography>
             ) : null}
             <Button variant='contained' type='submit' fullWidth size='small'>
-              {' '}
-              Login
+              {isLoading ? (
+                <ThreeCircles
+                  height='20'
+                  width='100'
+                  color='white'
+                  wrapperStyle={{}}
+                  wrapperClass=''
+                  visible={true}
+                  ariaLabel='three-circles-rotating'
+                  outerCircleColor=''
+                  innerCircleColor=''
+                  middleCircleColor=''
+                />
+              ) : (
+                'Login'
+              )}
             </Button>
           </Stack>
           <Box sx={{ mt: 2, mx: 3, textAlign: 'end' }}>

@@ -26,6 +26,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AddQuery, GetQuery } from '../../queryApi/ReactApi';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { Circles } from 'react-loader-spinner';
 // import SweetAlert from 'react-bootstrap-sweetalert';
 
 const Contact = () => {
@@ -168,7 +169,24 @@ const Contact = () => {
         <ToastContainer />
         <Divider />
         {isLoading ? (
-          'Loading...'
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+          >
+            <Circles
+              height='80'
+              width='80'
+              color='#4fa94d'
+              ariaLabel='circles-loading'
+              wrapperStyle={{}}
+              wrapperClass=''
+              visible={true}
+            />
+          </div>
         ) : contact ? (
           <ContactList contactdatainfo={contact} />
         ) : null}

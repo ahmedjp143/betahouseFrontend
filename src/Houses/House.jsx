@@ -31,6 +31,7 @@ import { toast } from 'react-toastify';
 import SweetAlert from 'react-bootstrap-sweetalert';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { Circles } from 'react-loader-spinner';
 
 function House() {
   const validationYup = yup.object({
@@ -369,7 +370,24 @@ function House() {
         ) : null}
         <Divider />
         {isLoading ? (
-          'loading...'
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+          >
+            <Circles
+              height='80'
+              width='80'
+              color='#4fa94d'
+              ariaLabel='circles-loading'
+              wrapperStyle={{}}
+              wrapperClass=''
+              visible={true}
+            />
+          </div>
         ) : house ? (
           <HouseList
             housegetdata={house}
