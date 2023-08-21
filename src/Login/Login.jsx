@@ -45,7 +45,7 @@ function Login() {
           //   console.log(res.data.token);
           toast.success(res.data.message);
           jscookie.set('token', res.data.token);
-          usenavigate('/dashboard/dashboard');
+          usenavigate('/dashboard');
         } else {
           toast.error(res.data.message);
         }
